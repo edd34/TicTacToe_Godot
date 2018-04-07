@@ -2,6 +2,7 @@ extends TextureButton
 
 onready var board = get_node("/root/Board")
 onready var parent_node = int(get_parent().name)
+onready var label = get_node("../../../UI/Info/Label")
 
 func _on_TextureButton_pressed():
 	if (board.state == board.GameState.IN_PROGRESS and 
@@ -11,5 +12,14 @@ func _on_TextureButton_pressed():
 		elif board.player_currentTurn == board.Player.O :
 			get_node("../Sprite").setSprite_O()
 		board.mark(parent_node)
-		board.debug_print()
+		
+	if(board.state == board.GameState.FINISHED):
+		label.text = "Winner is "+board.getWinner()+" !"
+		pass
+	else:
+		match board.player_currentTurn :
+			board.Player.X :
+				label.text = "Player X turn"
+			board.Player.O:
+				label.text = "Player O turn"
 	pass # replace with function body

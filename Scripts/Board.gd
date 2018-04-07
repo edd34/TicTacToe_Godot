@@ -23,8 +23,12 @@ func print_board():
 	pass
 
 func getWinner():
-	return player_winner
-
+	if(player_winner == Player.X):
+		return "X"
+	else:
+		return "O"
+	pass
+	
 func clearCells():
 	for i in range(9):
 		Cells[i]=0
