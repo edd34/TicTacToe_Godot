@@ -310,3 +310,8 @@ platform/windows/godot_res.res
 .scons_node_count
 
 exported/
+
+# ===================
+# Custom
+# ===================
+export_presets.cfg
