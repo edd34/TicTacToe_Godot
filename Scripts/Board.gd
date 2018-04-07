@@ -19,7 +19,7 @@ var player_currentTurn = null
 func print_board():
 	print(" ", Cells[0]," ",Cells[1]," ",Cells[2])
 	print(" ", Cells[3]," ",Cells[4]," ",Cells[5])
-	print(" ", Cells[6]," ",Cells[7]," ",Cells[7])
+	print(" ", Cells[6]," ",Cells[7]," ",Cells[8])
 	pass
 
 func getWinner():
@@ -40,30 +40,30 @@ func isValid(index):
 	pass
 
 func isOutOfBound(index):
-	return (index >= 0 && index <= 8)
+	return (index < 0 || index > 8)
 
 func isCellValueAlreadySet(index):
 	return Cells[index] != 0
 
 func isWinningMoveByPlayer(player):
 	if(Cells[0] == player && Cells[1] == player && Cells[2] == player):
-		return [player,0]
+		return true
 	elif(Cells[3] == player && Cells[4] == player && Cells[5] == player):
-		return [player,1]
+		return true
 	elif(Cells[6] == player && Cells[7] == player && Cells[8] == player):
-		return [player,2]
+		return true
 	elif(Cells[0] == player && Cells[3] == player && Cells[6] == player):
-		return [player,3]
+		return true
 	elif(Cells[1] == player && Cells[4] == player && Cells[7] == player):
-		return [player,4]
+		return true
 	elif(Cells[2] == player && Cells[5] == player && Cells[8] == player):
-		return [player,5]
+		return true
 	elif(Cells[0] == player && Cells[4] == player && Cells[8] == player):
-		return [player,6]
+		return true
 	elif(Cells[2] == player && Cells[4] == player && Cells[6] == player):
-		return [player,7]
+		return true
 	else:
-		return [0,-1]
+		return false
 	
 	pass
 			
@@ -74,23 +74,24 @@ func flipCurrentTurn():
 		player_currentTurn = Player.X
 	
 func mark_row_col(index):
-	print("mark row col")
 	if(isValid(index)):
 		Cells[index] = player_currentTurn
-		if(isWinningMoveByPlayer(player_currentTurn,index)):
+		if(isWinningMoveByPlayer(player_currentTurn)):
 			state = GameState.FINISHED
 			player_winner = player_currentTurn
-			get_node("../../UI/player_turn").text = ""
+			#get_node("../../UI/player_turn").text = ""
 			if player_winner == Player.X :
-				get_node("../../UI/Winner").text = "Winner = player X"
+				#get_node("../../UI/Winner").text = "Winner = player X"
+				print("winner = 1")
 			else:
-				get_node("../../UI/Winner").text = "Winner = player O"
-			pass
+				print("winner = 2")
+				#get_node("../../UI/Winner").text = "Winner = player O"
+			
 		else:
 			flipCurrentTurn()
 			
 func mark(pos):
-	mark_row_col(pos-1)
+	mark_row_col(pos)
 	pass	
 
 func _ready():
@@ -101,6 +102,10 @@ func _ready():
 	print_board()
 	# Initialization here
 	pass
+
+func debug_print():
+	print("current_turn ",player_currentTurn)
+	print_board()
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
