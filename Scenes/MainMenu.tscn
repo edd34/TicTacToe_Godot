@@ -4,22 +4,34 @@
 [ext_resource path="res://Scripts/Menu/MainMenu/NewGameButton.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/Menu/MainMenu/Exit.gd" type="Script" id=3]
 
-[sub_resource type="DynamicFontData" id=1]
-
-font_path = "res://Assets/fonts/Candal.ttf"
-
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 
 size = 40
 use_mipmaps = false
 use_filter = false
-font_data = SubResource( 1 )
+font_data = ExtResource( 1 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=2]
 
 size = 30
 use_mipmaps = true
+use_filter = false
+font_data = ExtResource( 1 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 20
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 1 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=6]
+
+size = 20
+use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 1 )
 _sections_unfolded = [ "Font", "Settings" ]
@@ -30,17 +42,9 @@ size = 20
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 1 )
-_sections_unfolded = [ "Font", "Settings" ]
-
-[sub_resource type="DynamicFont" id=5]
-
-size = 20
-use_mipmaps = false
-use_filter = false
-font_data = ExtResource( 1 )
 _sections_unfolded = [ "Font", "Resource", "Settings" ]
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=5]
 
 size = 10
 use_mipmaps = false
@@ -95,10 +99,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 144.0
-margin_top = 204.0
-margin_right = 328.0
-margin_bottom = 515.0
+margin_left = 131.0
+margin_top = 155.0
+margin_right = 340.0
+margin_bottom = 565.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -115,15 +119,15 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 184.0
-margin_bottom = 2.0
+margin_right = 209.0
+margin_bottom = 53.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "TicTacToe"
 align = 1
 percent_visible = 1.0
@@ -137,16 +141,16 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 72.0
-margin_right = 184.0
-margin_bottom = 112.0
+margin_top = 123.0
+margin_right = 209.0
+margin_bottom = 163.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 2 )
 text = "Main Menu"
 align = 1
 percent_visible = 1.0
@@ -160,9 +164,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 182.0
-margin_right = 184.0
-margin_bottom = 311.0
+margin_top = 233.0
+margin_right = 209.0
+margin_bottom = 410.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -179,7 +183,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 184.0
+margin_right = 209.0
 margin_bottom = 33.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -188,7 +192,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -200,14 +204,14 @@ align = 1
 script = ExtResource( 2 )
 _sections_unfolded = [ "Focus", "Size Flags", "Theme", "custom_fonts", "custom_styles" ]
 
-[node name="AboutButton" type="Button" parent="MarginContainer/CenterContainer/MainScreen/MainMenu" index="1"]
+[node name="Help" type="Button" parent="MarginContainer/CenterContainer/MainScreen/MainMenu" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 48.0
-margin_right = 184.0
+margin_right = 209.0
 margin_bottom = 81.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -216,7 +220,33 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Help"
+flat = false
+align = 1
+_sections_unfolded = [ "Focus", "custom_fonts" ]
+
+[node name="AboutButton" type="Button" parent="MarginContainer/CenterContainer/MainScreen/MainMenu" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 96.0
+margin_right = 209.0
+margin_bottom = 129.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 3 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -226,15 +256,15 @@ flat = false
 align = 1
 _sections_unfolded = [ "Focus", "custom_fonts" ]
 
-[node name="ExitButton" type="Button" parent="MarginContainer/CenterContainer/MainScreen/MainMenu" index="2"]
+[node name="ExitButton" type="Button" parent="MarginContainer/CenterContainer/MainScreen/MainMenu" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 96.0
-margin_right = 184.0
-margin_bottom = 129.0
+margin_top = 144.0
+margin_right = 209.0
+margin_bottom = 177.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -242,7 +272,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -287,7 +317,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 6
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 5 )
 text = "Some help
 
 Some help"
