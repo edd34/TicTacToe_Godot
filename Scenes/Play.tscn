@@ -6,4 +6,8 @@
 
 [node name="grid" type="Sprite" parent="." index="0"]
 
+position = Vector2( 240, 320 )
+scale = Vector2( 1.16667, 1.16667 )
+texture = ExtResource( 1 )
+
 
