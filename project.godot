@@ -13,6 +13,10 @@ config_version=3
 config/name="TicTacToe"
 config/icon="res://icon.png"
 
+[autoload]
+
+global="*res://Scripts/global.gd"
+
 [display]
 
 window/size/width=480
