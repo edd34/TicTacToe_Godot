@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Font/Candal.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Scripts/Menu/MainMenu/NewGameButton.gd" type="Script" id=2]
-[ext_resource path="res://Scripts/Menu/MainMenu/Exit.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Menu/NewGameButton.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Menu/ExitButton.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -52,7 +52,7 @@ use_filter = false
 font_data = ExtResource( 1 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 [node name="MarginContainer" type="MarginContainer" parent="." index="0"]
 
