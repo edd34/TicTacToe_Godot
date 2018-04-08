@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Menu/About/RichTextLabel.gd" type="Script" id=1]
+
+[node name="Node" type="Node" index="0"]
+
+[node name="Timer" type="Timer" parent="." index="0"]
+
+process_mode = 1
+wait_time = 0.1
+one_shot = false
+autostart = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 37.5
+margin_top = 264.0
+margin_right = -37.5
+margin_bottom = -264.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+bbcode_enabled = true
+bbcode_text = "0"
+visible_characters = 0
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "0"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+script = ExtResource( 1 )
+_sections_unfolded = [ "BBCode", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[connection signal="timeout" from="Timer" to="RichTextLabel" method="_on_Timer_timeout"]
+
+
