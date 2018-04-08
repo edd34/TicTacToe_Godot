@@ -5,6 +5,5 @@ func _ready():
 
 
 func _on_Help_pressed():
-	#print(get_node("./PopupMenu").name)
-	get_node("./Popup").show()
+	get_node("/root/global").goto_scene("res://Scenes/Help.tscn")
 	pass # replace with function body

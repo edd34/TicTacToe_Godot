@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Scripts/Menu/About/RichTextLabel.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Menu/RichTextLabel.gd" type="Script" id=1]
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 [node name="Timer" type="Timer" parent="." index="0"]
 
@@ -29,7 +29,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 bbcode_enabled = true
 bbcode_text = "0"
-visible_characters = 0
+visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4

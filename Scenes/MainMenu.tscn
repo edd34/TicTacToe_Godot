@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Font/Candal.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/Menu/NewGameButton.gd" type="Script" id=2]
-[ext_resource path="res://Scripts/Menu/ExitButton.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Menu/HelpMenuButton.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Menu/ExitButton.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -220,6 +221,7 @@ group = null
 text = "Help"
 flat = false
 align = 1
+script = ExtResource( 3 )
 _sections_unfolded = [ "Focus", "custom_fonts" ]
 
 [node name="AboutButton" type="Button" parent="MarginContainer/CenterContainer/MainScreen/MainMenu" index="2"]
@@ -272,10 +274,12 @@ group = null
 text = "Exit"
 flat = false
 align = 1
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 _sections_unfolded = [ "Focus", "custom_fonts" ]
 
 [connection signal="pressed" from="MarginContainer/CenterContainer/MainScreen/MainMenu/NewGameButton" to="MarginContainer/CenterContainer/MainScreen/MainMenu/NewGameButton" method="_on_NewGameButton_pressed"]
+
+[connection signal="pressed" from="MarginContainer/CenterContainer/MainScreen/MainMenu/Help" to="MarginContainer/CenterContainer/MainScreen/MainMenu/Help" method="_on_Help_pressed"]
 
 [connection signal="pressed" from="MarginContainer/CenterContainer/MainScreen/MainMenu/ExitButton" to="MarginContainer/CenterContainer/MainScreen/MainMenu/ExitButton" method="_on_ExitButton_pressed"]
 
