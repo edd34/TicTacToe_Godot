@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Font/Candal.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/Menu/NewGameButton.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/Menu/HelpMenuButton.gd" type="Script" id=3]
-[ext_resource path="res://Scripts/Menu/ExitButton.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Menu/AboutButton.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Menu/ExitButton.gd" type="Script" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -45,7 +46,7 @@ use_filter = false
 font_data = ExtResource( 1 )
 _sections_unfolded = [ "Font", "Resource", "Settings" ]
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 [node name="MarginContainer" type="MarginContainer" parent="." index="0"]
 
@@ -248,6 +249,7 @@ group = null
 text = "About"
 flat = false
 align = 1
+script = ExtResource( 4 )
 _sections_unfolded = [ "Focus", "custom_fonts" ]
 
 [node name="ExitButton" type="Button" parent="MarginContainer/CenterContainer/MainScreen/MainMenu" index="3"]
@@ -274,12 +276,14 @@ group = null
 text = "Exit"
 flat = false
 align = 1
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 _sections_unfolded = [ "Focus", "custom_fonts" ]
 
 [connection signal="pressed" from="MarginContainer/CenterContainer/MainScreen/MainMenu/NewGameButton" to="MarginContainer/CenterContainer/MainScreen/MainMenu/NewGameButton" method="_on_NewGameButton_pressed"]
 
 [connection signal="pressed" from="MarginContainer/CenterContainer/MainScreen/MainMenu/Help" to="MarginContainer/CenterContainer/MainScreen/MainMenu/Help" method="_on_Help_pressed"]
+
+[connection signal="pressed" from="MarginContainer/CenterContainer/MainScreen/MainMenu/AboutButton" to="MarginContainer/CenterContainer/MainScreen/MainMenu/AboutButton" method="_on_AboutButton_pressed"]
 
 [connection signal="pressed" from="MarginContainer/CenterContainer/MainScreen/MainMenu/ExitButton" to="MarginContainer/CenterContainer/MainScreen/MainMenu/ExitButton" method="_on_ExitButton_pressed"]
 
