@@ -198,13 +198,6 @@ clip_text = true
 align = 1
 _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect" ]
 
-[node name="Timer" type="Timer" parent="." index="4"]
-
-process_mode = 1
-wait_time = 0.1
-one_shot = false
-autostart = true
-
 [connection signal="pressed" from="Header/MainMenu" to="Header/MainMenu" method="_on_MainMenu_pressed"]
 
 
