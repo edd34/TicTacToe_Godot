@@ -1,5 +1,7 @@
 extends RichTextLabel
 
+onready var label_page = get_node("../../Footer/Label")
+
 var dialog = ["TicTacoToe help.",
 			"You can press on the text to make it appear quicly.",
 			"The entire game can be played with click.",
@@ -11,6 +13,7 @@ func _ready():
 	set_process_input(true)
 	set_bbcode(dialog[page])
 	set_visible_characters(0)
+	label_page.text = str(page+1)+" / "+str(dialog.size())
 	pass
 
 func _input(event):
@@ -27,6 +30,7 @@ func _on_Next_pressed():
 		page += 1
 		set_bbcode(dialog[page])
 		set_visible_characters(0)
+		label_page.text = str(page+1)+" / "+str(dialog.size())
 
 
 func _on_Previous_pressed():
@@ -34,3 +38,4 @@ func _on_Previous_pressed():
 		page -= 1
 		set_bbcode(dialog[page])
 		set_visible_characters(0)
+		label_page.text = str(page+1)+" / "+str(dialog.size())
