@@ -5,6 +5,7 @@ onready var label_page = get_node("../../Footer/Label")
 var dialog = ["TicTacoToe help.",
 			"You can press on the text to make it appear quicly.",
 			"The entire game can be played with click.",
+			"More are coming soon",
 			"End of the tutorial."]
 
 var page = 0

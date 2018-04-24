@@ -6,8 +6,6 @@
 [ext_resource path="res://Font/Candal.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Scripts/Menu/MainMenuButton.gd" type="Script" id=5]
 
-
-
 [sub_resource type="DynamicFont" id=1]
 
 size = 30
@@ -24,7 +22,7 @@ use_filter = false
 font_data = ExtResource( 4 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 [node name="grid" type="Sprite" parent="." index="0"]
 
@@ -354,8 +352,6 @@ script = ExtResource( 3 )
 
 [node name="UI" type="Node" parent="." index="1"]
 
-editor/display_folded = true
-
 [node name="Footer" type="Container" parent="UI" index="0"]
 
 anchor_left = 0.0
@@ -446,7 +442,6 @@ _sections_unfolded = [ "custom_fonts" ]
 
 [node name="Header" type="Container" parent="UI" index="2"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
@@ -490,6 +485,7 @@ _sections_unfolded = [ "custom_fonts" ]
 
 [node name="ToggleSound" type="Button" parent="UI/Header" index="1"]
 
+visible = false
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
