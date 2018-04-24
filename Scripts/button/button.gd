@@ -1,6 +1,6 @@
 extends TextureButton
 
-onready var board = get_node("/root/Board")
+onready var board = get_tree().get_root().get_node("Node/Script").find_node("Board")
 onready var parent_node = int(get_parent().name)
 onready var label = get_node("../../../UI/Info/Label")
 
