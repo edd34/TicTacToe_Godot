@@ -16,5 +16,7 @@ func _ready():
 
 
 func _on_NewGameButton_pressed():
-	get_node("/root/global").goto_scene("res://Scenes/Play.tscn")
+	##get_node("/root/global").goto_scene("res://Scenes/Play.tscn")
+	get_node("../Popup").popup()
+	get_node("../Popup/PopupMenu").popup()
 	pass # replace with function body
