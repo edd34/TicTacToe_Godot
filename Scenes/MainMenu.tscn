@@ -279,34 +279,16 @@ align = 1
 script = ExtResource( 5 )
 _sections_unfolded = [ "Focus", "custom_fonts" ]
 
-[node name="Popup" type="Popup" parent="MarginContainer/CenterContainer/MainScreen/MainMenu" index="4"]
+[node name="PopupMenu" type="PopupMenu" parent="MarginContainer/CenterContainer" index="1"]
 
-visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 192.0
-margin_right = 209.0
-margin_bottom = 192.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-popup_exclusive = true
-_sections_unfolded = [ "Popup" ]
-
-[node name="PopupMenu" type="PopupMenu" parent="MarginContainer/CenterContainer/MainScreen/MainMenu/Popup" index="0"]
-
-visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 20.0
-margin_bottom = 20.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 65.0
+margin_top = 28.0
+margin_right = 200.0
+margin_bottom = 183.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -315,9 +297,9 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 popup_exclusive = true
-items = [  ]
+items = [ "One Player", null, false, false, false, 0, 0, null, "", false, "", null, false, false, true, 1, 0, null, "", true, "Two Player", null, false, false, false, 2, 0, null, "", false, "", null, false, false, true, -1, 0, null, "", true, "Remote Player", null, false, false, false, 4, 0, null, "", false, "", null, false, false, true, -1, 0, null, "", true, "Cancel", null, false, false, false, -1, 0, null, "", false ]
 hide_on_state_item_selection = false
-_sections_unfolded = [ "Popup" ]
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Pause", "Popup", "Rect", "Size Flags", "Visibility", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
 [connection signal="pressed" from="MarginContainer/CenterContainer/MainScreen/MainMenu/NewGameButton" to="MarginContainer/CenterContainer/MainScreen/MainMenu/NewGameButton" method="_on_NewGameButton_pressed"]
 
