@@ -355,8 +355,6 @@ script = ExtResource( 3 )
 
 [node name="UI" type="Node" parent="." index="1"]
 
-editor/display_folded = true
-
 [node name="Footer" type="Container" parent="UI" index="0"]
 
 anchor_left = 0.0
@@ -464,6 +462,7 @@ size_flags_vertical = 1
 
 [node name="Pause" type="Button" parent="UI/Header" index="0"]
 
+visible = false
 anchor_left = 0.0
 anchor_top = 0.5
 anchor_right = 0.0
