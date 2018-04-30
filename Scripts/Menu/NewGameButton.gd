@@ -1,21 +1,37 @@
 extends Button
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
+onready var PopupMenu_newGame = get_tree().get_root().get_node("Node/MarginContainer/CenterContainer/PopupMenu")
+onready var Dialog = get_tree().get_root().get_node("Node/MarginContainer/CenterContainer/Dialog")
 
-func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
+func show_Popup_NewGame():
+	PopupMenu_newGame.popup()
+	PopupMenu_newGame.set_position(Vector2(315,403))
 	pass
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
-
-
 func _on_NewGameButton_pressed():
-	##get_node("/root/global").goto_scene("res://Scenes/Play.tscn")
-	get_tree().get_root().get_node("Node/MarginContainer/CenterContainer/PopupMenu").popup()
+	show_Popup_NewGame()
+	pass
+
+
+func _on_PopupMenu_index_pressed(index):
+		match PopupMenu_newGame.get_item_text(index):
+			"One Player":
+				PopupMenu_newGame.hide()
+				Dialog.show()
+				pass
+			"Two Player":
+				get_node("/root/global").goto_scene("res://Scenes/Play.tscn")
+				pass
+			"Remote Player":
+				PopupMenu_newGame.hide()
+				Dialog.show()
+				pass
+			"Cancel":
+				PopupMenu_newGame.hide()
+				pass
+
+
+func _on_Dialog_confirmed():
+	Dialog.hide()
+	show_Popup_NewGame()
 	pass # replace with function body
