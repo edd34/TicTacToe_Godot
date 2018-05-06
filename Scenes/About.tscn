@@ -157,49 +157,38 @@ custom_fonts/normal_font = SubResource( 3 )
 bbcode_enabled = true
 bbcode_text = "TicTacToe
 
-This game has been made under the Mawheto Studio
+This game has been made under the Mawheto Studio.
 
 Main developper - @edd
 
-UI designer - @edd
-
-UX designer - @edd
-
 Special thanks to Art2 for his awesome art design
 
-Special thanks also to Moise and Mouz1000 for their support and feedbacks
-
 Want to boost your karma ? Here how to follow us :
-- Facebook @mawheto
+- Facebook @mawheto !
 
-All right reserved - Mawheto, 2018 "
+All right reserved - Mawheto, 2018 ."
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
 text = "TicTacToe
 
-This game has been made under the Mawheto Studio
+This game has been made under the Mawheto Studio.
 
 Main developper - @edd
 
-UI designer - @edd
-
-UX designer - @edd
-
 Special thanks to Art2 for his awesome art design
 
-Special thanks also to Moise and Mouz1000 for their support and feedbacks
-
 Want to boost your karma ? Here how to follow us :
-- Facebook @mawheto
+- Facebook @mawheto !
 
-All right reserved - Mawheto, 2018 "
+All right reserved - Mawheto, 2018 ."
 scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
 script = ExtResource( 3 )
+_sections_unfolded = [ "BBCode" ]
 
 [node name="Footer" type="Container" parent="." index="2"]
 
