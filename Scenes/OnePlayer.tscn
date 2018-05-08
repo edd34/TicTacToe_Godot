@@ -5,7 +5,7 @@
 [ext_resource path="res://Scripts/button/button.gd" type="Script" id=3]
 [ext_resource path="res://Font/Candal.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Scripts/Menu/MainMenuButton.gd" type="Script" id=5]
-[ext_resource path="res://Scripts/Board.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/Board_One_Player.gd" type="Script" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -27,7 +27,6 @@ _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
 [node name="grid" type="Sprite" parent="." index="0"]
 
-editor/display_folded = true
 position = Vector2( 240, 320 )
 scale = Vector2( 1.16667, 1.16667 )
 texture = ExtResource( 1 )
@@ -39,7 +38,6 @@ __meta__ = {
 
 [node name="0" type="Node2D" parent="grid" index="0"]
 
-editor/display_folded = true
 position = Vector2( -123.347, -123.362 )
 scale = Vector2( 1.7704, 1.76991 )
 _sections_unfolded = [ "Transform" ]
