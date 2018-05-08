@@ -16,8 +16,7 @@ func _on_NewGameButton_pressed():
 func _on_PopupMenu_index_pressed(index):
 		match PopupMenu_newGame.get_item_text(index):
 			"One Player":
-				PopupMenu_newGame.hide()
-				Dialog.show()
+				get_node("/root/global").goto_scene("res://Scenes/OnePlayer.tscn")
 				pass
 			"Two Player":
 				get_node("/root/global").goto_scene("res://Scenes/Play.tscn")
