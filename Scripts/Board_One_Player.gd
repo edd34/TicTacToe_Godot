@@ -14,7 +14,35 @@ var Cells = [0,0,0,0,0,0,0,0,0]
 
 
 var player_winner = -1
-var player_currentTurn = null
+var is_player_currentTurn = null
+
+func return_available_move():
+	var available = []
+	for i in range(9):
+		if Cells[i] == 0 :
+			available.append(i)
+			pass
+		pass
+	return available
+	pass
+
+
+func AI_choose_random_move():
+	var moves = return_available_move()
+	if moves.size() > 0:
+		randomize()
+		return moves[randi() % moves.size()]
+		pass
+	pass
+
+func get_sprite_node(index):
+	var AI_sprite = get_tree().get_root().get_node("Node/grid/"+String(index)+"/Sprite")
+	return AI_sprite
+	pass
+
+func AI_set_sprite(index):
+	get_sprite_node(index).setSprite_O()
+	pass
 
 func print_board():
 	print(" ", Cells[0]," ",Cells[1]," ",Cells[2])
@@ -72,17 +100,22 @@ func isWinningMoveByPlayer(player):
 	pass
 			
 func flipCurrentTurn():
-	if(player_currentTurn == Player.X):
-		player_currentTurn = Player.O
+	if(is_player_currentTurn == Player.X):
+		is_player_currentTurn = Player.O
+		var AI_choice = AI_choose_random_move()
+		mark(AI_choice)
+		AI_set_sprite(AI_choice)
+		print("debug AI has played = "+String(AI_choice))
 	else:
-		player_currentTurn = Player.X
+		is_player_currentTurn = Player.X
+	pass
 	
 func mark_row_col(index):
 	if(isValid(index)):
-		Cells[index] = player_currentTurn
-		if(isWinningMoveByPlayer(player_currentTurn)):
+		Cells[index] = is_player_currentTurn
+		if(isWinningMoveByPlayer(is_player_currentTurn)):
 			state = GameState.FINISHED
-			player_winner = player_currentTurn
+			player_winner = is_player_currentTurn
 			#get_node("../../UI/player_turn").text = ""
 			if player_winner == Player.X :
 				#get_node("../../UI/Winner").text = "Winner = player X"
@@ -101,14 +134,14 @@ func mark(pos):
 func _ready():
 	clearCells()
 	player_winner = null
-	player_currentTurn = Player.X
+	is_player_currentTurn = Player.X
 	state = GameState.IN_PROGRESS
 	print_board()
 	# Initialization here
 	pass
 
 func debug_print():
-	print("current_turn ",player_currentTurn)
+	print("current_turn ",is_player_currentTurn)
 	print_board()
 
 #func _process(delta):
