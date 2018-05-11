@@ -59,9 +59,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 163.0
-margin_top = 226.0
+margin_top = 256.0
 margin_right = 308.0
-margin_bottom = 494.0
+margin_bottom = 464.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -250,6 +250,7 @@ max_lines_visible = -1
 
 [node name="Part2" type="VBoxContainer" parent="MarginContainer/CenterContainer/MainScreen/HBoxContainer" index="2"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -265,6 +266,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 7
 alignment = 1
+script = ExtResource( 2 )
 _sections_unfolded = [ "custom_constants" ]
 
 [node name="Plus" type="Button" parent="MarginContainer/CenterContainer/MainScreen/HBoxContainer/Part2" index="0"]
@@ -359,6 +361,7 @@ max_lines_visible = -1
 
 [node name="Part3" type="VBoxContainer" parent="MarginContainer/CenterContainer/MainScreen/HBoxContainer" index="4"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -374,6 +377,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 7
 alignment = 1
+script = ExtResource( 2 )
 _sections_unfolded = [ "custom_constants" ]
 
 [node name="Plus" type="Button" parent="MarginContainer/CenterContainer/MainScreen/HBoxContainer/Part3" index="0"]
@@ -468,6 +472,7 @@ max_lines_visible = -1
 
 [node name="Part4" type="VBoxContainer" parent="MarginContainer/CenterContainer/MainScreen/HBoxContainer" index="6"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -483,6 +488,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 7
 alignment = 1
+script = ExtResource( 2 )
 _sections_unfolded = [ "custom_constants" ]
 
 [node name="Plus" type="Button" parent="MarginContainer/CenterContainer/MainScreen/HBoxContainer/Part4" index="0"]
