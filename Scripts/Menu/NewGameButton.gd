@@ -22,8 +22,7 @@ func _on_PopupMenu_index_pressed(index):
 				get_node("/root/global").goto_scene("res://Scenes/Play.tscn")
 				pass
 			"Remote Player":
-				PopupMenu_newGame.hide()
-				Dialog.show()
+				get_node("/root/global").goto_scene("res://Scenes/Network_Settings.tscn")
 				pass
 			"Cancel":
 				PopupMenu_newGame.hide()
