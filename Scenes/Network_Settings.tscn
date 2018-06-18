@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Font/Candal.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Scripts/Network/digit_selector.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Network/ModeSelect.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Network/digit_selector.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -100,6 +101,7 @@ flat = false
 align = 1
 items = [ "Select Mode", null, true, 0, null, "Client", null, false, 1, null, "Server", null, false, 2, null ]
 selected = 0
+script = ExtResource( 2 )
 _sections_unfolded = [ "Size Flags" ]
 
 [node name="ClientMode" type="VBoxContainer" parent="MarginContainer/MainScreen" index="2"]
@@ -146,7 +148,6 @@ max_lines_visible = -1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MainScreen/ClientMode" index="1"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -180,7 +181,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 7
 alignment = 1
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 _sections_unfolded = [ "custom_constants" ]
 
 [node name="Plus100" type="Button" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part1" index="0"]
@@ -387,7 +388,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 7
 alignment = 1
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 _sections_unfolded = [ "custom_constants" ]
 
 [node name="Plus100" type="Button" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part2" index="0"]
@@ -594,7 +595,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 7
 alignment = 1
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 _sections_unfolded = [ "custom_constants" ]
 
 [node name="Plus100" type="Button" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part3" index="0"]
@@ -801,7 +802,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 7
 alignment = 1
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 _sections_unfolded = [ "custom_constants" ]
 
 [node name="Plus100" type="Button" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part4" index="0"]
@@ -1073,7 +1074,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 7
 alignment = 1
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 _sections_unfolded = [ "custom_constants" ]
 
 [node name="Plus100" type="Button" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part1" index="0"]
@@ -1280,7 +1281,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 7
 alignment = 1
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 _sections_unfolded = [ "custom_constants" ]
 
 [node name="Plus100" type="Button" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part2" index="0"]
@@ -1487,7 +1488,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 7
 alignment = 1
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 _sections_unfolded = [ "custom_constants" ]
 
 [node name="Plus100" type="Button" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part3" index="0"]
@@ -1694,7 +1695,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 7
 alignment = 1
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 _sections_unfolded = [ "custom_constants" ]
 
 [node name="Plus100" type="Button" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part4" index="0"]
