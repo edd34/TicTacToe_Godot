@@ -10,5 +10,12 @@ func _ready():
 	pass
 
 func _on_Plus_pressed(id):
-	print("ID = "+String(id))
-	pass
+	if get_item_text(id) == "Client":
+		clientModeNode.show()
+		serverModeNode.hide()
+		mode = "client"
+	elif get_item_text(id) == "Server":
+		clientModeNode.hide()
+		serverModeNode.show()
+		mode = "server"
+	
