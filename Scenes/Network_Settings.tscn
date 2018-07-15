@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Font/Candal.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/Network/ModeSelect.gd" type="Script" id=2]
-[ext_resource path="res://Scripts/Network/digit_selector.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -106,15 +105,14 @@ _sections_unfolded = [ "Size Flags" ]
 
 [node name="ClientMode" type="VBoxContainer" parent="MarginContainer/MainScreen" index="2"]
 
-editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 291.0
+margin_top = 310.0
 margin_right = 472.0
-margin_bottom = 539.0
+margin_bottom = 520.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -154,7 +152,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 33.0
 margin_right = 472.0
-margin_bottom = 209.0
+margin_bottom = 171.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -166,13 +164,12 @@ _sections_unfolded = [ "Size Flags", "custom_constants" ]
 
 [node name="Part1" type="VBoxContainer" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer" index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 109.0
-margin_bottom = 176.0
+margin_right = 108.0
+margin_bottom = 138.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -181,172 +178,30 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 7
 alignment = 1
-script = ExtResource( 3 )
 _sections_unfolded = [ "custom_constants" ]
 
-[node name="Plus100" type="Button" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part1" index="0"]
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part1" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 109.0
-margin_bottom = 20.0
+margin_top = 57.0
+margin_right = 108.0
+margin_bottom = 81.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
-mouse_default_cursor_shape = 0
+mouse_default_cursor_shape = 1
 size_flags_horizontal = 1
 size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "+100"
-flat = false
-align = 1
-
-[node name="Plus10" type="Button" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part1" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 27.0
-margin_right = 109.0
-margin_bottom = 47.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "+10"
-flat = false
-align = 1
-
-[node name="Plus" type="Button" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part1" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 54.0
-margin_right = 109.0
-margin_bottom = 74.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "+1"
-flat = false
-align = 1
-
-[node name="Digit" type="Label" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part1" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 81.0
-margin_right = 109.0
-margin_bottom = 95.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-text = "0"
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Minus" type="Button" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part1" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 102.0
-margin_right = 109.0
-margin_bottom = 122.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "-1"
-flat = false
-align = 1
-
-[node name="Minus10" type="Button" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part1" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 129.0
-margin_right = 109.0
-margin_bottom = 149.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "-10"
-flat = false
-align = 1
-
-[node name="Minus100" type="Button" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part1" index="6"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 156.0
-margin_right = 109.0
-margin_bottom = 176.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "-100"
-flat = false
-align = 1
+context_menu_enabled = true
+placeholder_alpha = 0.6
+caret_blink = false
+caret_blink_speed = 0.65
+caret_position = 0
 
 [node name="Digit1" type="Label" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer" index="1"]
 
@@ -354,9 +209,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 113.0
-margin_right = 117.0
-margin_bottom = 176.0
+margin_left = 112.0
+margin_right = 116.0
+margin_bottom = 138.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -372,14 +227,13 @@ max_lines_visible = -1
 
 [node name="Part2" type="VBoxContainer" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer" index="2"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 121.0
-margin_right = 230.0
-margin_bottom = 176.0
+margin_left = 120.0
+margin_right = 228.0
+margin_bottom = 138.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -388,172 +242,30 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 7
 alignment = 1
-script = ExtResource( 3 )
 _sections_unfolded = [ "custom_constants" ]
 
-[node name="Plus100" type="Button" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part2" index="0"]
+[node name="LineEdit2" type="LineEdit" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part2" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 109.0
-margin_bottom = 20.0
+margin_top = 57.0
+margin_right = 108.0
+margin_bottom = 81.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
-mouse_default_cursor_shape = 0
+mouse_default_cursor_shape = 1
 size_flags_horizontal = 1
 size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "+100"
-flat = false
-align = 1
-
-[node name="Plus10" type="Button" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part2" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 27.0
-margin_right = 109.0
-margin_bottom = 47.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "+10"
-flat = false
-align = 1
-
-[node name="Plus" type="Button" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part2" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 54.0
-margin_right = 109.0
-margin_bottom = 74.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "+1"
-flat = false
-align = 1
-
-[node name="Digit" type="Label" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part2" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 81.0
-margin_right = 109.0
-margin_bottom = 95.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-text = "0"
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Minus" type="Button" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part2" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 102.0
-margin_right = 109.0
-margin_bottom = 122.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "-1"
-flat = false
-align = 1
-
-[node name="Minus10" type="Button" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part2" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 129.0
-margin_right = 109.0
-margin_bottom = 149.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "-10"
-flat = false
-align = 1
-
-[node name="Minus100" type="Button" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part2" index="6"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 156.0
-margin_right = 109.0
-margin_bottom = 176.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "-100"
-flat = false
-align = 1
+context_menu_enabled = true
+placeholder_alpha = 0.6
+caret_blink = false
+caret_blink_speed = 0.65
+caret_position = 0
 
 [node name="Digit2" type="Label" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer" index="3"]
 
@@ -561,9 +273,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 234.0
-margin_right = 238.0
-margin_bottom = 176.0
+margin_left = 232.0
+margin_right = 236.0
+margin_bottom = 138.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -579,14 +291,13 @@ max_lines_visible = -1
 
 [node name="Part3" type="VBoxContainer" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer" index="4"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 242.0
-margin_right = 351.0
-margin_bottom = 176.0
+margin_left = 240.0
+margin_right = 348.0
+margin_bottom = 138.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -595,172 +306,30 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 7
 alignment = 1
-script = ExtResource( 3 )
 _sections_unfolded = [ "custom_constants" ]
 
-[node name="Plus100" type="Button" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part3" index="0"]
+[node name="LineEdit3" type="LineEdit" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part3" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 109.0
-margin_bottom = 20.0
+margin_top = 57.0
+margin_right = 108.0
+margin_bottom = 81.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
-mouse_default_cursor_shape = 0
+mouse_default_cursor_shape = 1
 size_flags_horizontal = 1
 size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "+100"
-flat = false
-align = 1
-
-[node name="Plus10" type="Button" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part3" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 27.0
-margin_right = 109.0
-margin_bottom = 47.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "+10"
-flat = false
-align = 1
-
-[node name="Plus" type="Button" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part3" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 54.0
-margin_right = 109.0
-margin_bottom = 74.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "+1"
-flat = false
-align = 1
-
-[node name="Digit" type="Label" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part3" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 81.0
-margin_right = 109.0
-margin_bottom = 95.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-text = "0"
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Minus" type="Button" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part3" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 102.0
-margin_right = 109.0
-margin_bottom = 122.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "-1"
-flat = false
-align = 1
-
-[node name="Minus10" type="Button" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part3" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 129.0
-margin_right = 109.0
-margin_bottom = 149.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "-10"
-flat = false
-align = 1
-
-[node name="Minus100" type="Button" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part3" index="6"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 156.0
-margin_right = 109.0
-margin_bottom = 176.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "-100"
-flat = false
-align = 1
+context_menu_enabled = true
+placeholder_alpha = 0.6
+caret_blink = false
+caret_blink_speed = 0.65
+caret_position = 0
 
 [node name="Digit3" type="Label" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer" index="5"]
 
@@ -768,9 +337,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 355.0
-margin_right = 359.0
-margin_bottom = 176.0
+margin_left = 352.0
+margin_right = 356.0
+margin_bottom = 138.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -786,14 +355,13 @@ max_lines_visible = -1
 
 [node name="Part4" type="VBoxContainer" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer" index="6"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 363.0
-margin_right = 472.0
-margin_bottom = 176.0
+margin_left = 360.0
+margin_right = 468.0
+margin_bottom = 138.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -802,172 +370,51 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 7
 alignment = 1
-script = ExtResource( 3 )
 _sections_unfolded = [ "custom_constants" ]
 
-[node name="Plus100" type="Button" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part4" index="0"]
+[node name="LineEdit4" type="LineEdit" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part4" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 109.0
-margin_bottom = 20.0
+margin_top = 57.0
+margin_right = 108.0
+margin_bottom = 81.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
-mouse_default_cursor_shape = 0
+mouse_default_cursor_shape = 1
 size_flags_horizontal = 1
 size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "+100"
-flat = false
-align = 1
-
-[node name="Plus10" type="Button" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part4" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 27.0
-margin_right = 109.0
-margin_bottom = 47.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "+10"
-flat = false
-align = 1
+context_menu_enabled = true
+placeholder_alpha = 0.6
+caret_blink = false
+caret_blink_speed = 0.65
+caret_position = 0
 
-[node name="Plus" type="Button" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part4" index="2"]
+[node name="Digit4" type="Label" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer" index="7"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 54.0
-margin_right = 109.0
-margin_bottom = 74.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "+1"
-flat = false
-align = 1
-
-[node name="Digit" type="Label" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part4" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 81.0
-margin_right = 109.0
-margin_bottom = 95.0
+margin_left = 472.0
+margin_right = 472.0
+margin_bottom = 138.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-text = "0"
 align = 1
+valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-
-[node name="Minus" type="Button" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part4" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 102.0
-margin_right = 109.0
-margin_bottom = 122.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "-1"
-flat = false
-align = 1
-
-[node name="Minus10" type="Button" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part4" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 129.0
-margin_right = 109.0
-margin_bottom = 149.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "-10"
-flat = false
-align = 1
-
-[node name="Minus100" type="Button" parent="MarginContainer/MainScreen/ClientMode/HBoxContainer/Part4" index="6"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 156.0
-margin_right = 109.0
-margin_bottom = 176.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "-100"
-flat = false
-align = 1
 
 [node name="Button" type="Button" parent="MarginContainer/MainScreen/ClientMode" index="2"]
 
@@ -976,9 +423,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 220.0
-margin_top = 228.0
+margin_top = 190.0
 margin_right = 251.0
-margin_bottom = 248.0
+margin_bottom = 210.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -997,15 +444,14 @@ _sections_unfolded = [ "Size Flags" ]
 
 [node name="ServerMode" type="VBoxContainer" parent="MarginContainer/MainScreen" index="3"]
 
-editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 408.0
+margin_top = 310.0
 margin_right = 472.0
-margin_bottom = 422.0
+margin_bottom = 520.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -1030,7 +476,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "Server"
+text = "IPv4 address"
 align = 1
 valign = 1
 percent_visible = 1.0
@@ -1039,15 +485,13 @@ max_lines_visible = -1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MainScreen/ServerMode" index="1"]
 
-editor/display_folded = true
-visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 33.0
-margin_right = 212.0
-margin_bottom = 209.0
+margin_right = 472.0
+margin_bottom = 171.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -1059,13 +503,12 @@ _sections_unfolded = [ "Size Flags", "custom_constants" ]
 
 [node name="Part1" type="VBoxContainer" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer" index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 44.0
-margin_bottom = 176.0
+margin_right = 108.0
+margin_bottom = 138.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -1074,172 +517,30 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 7
 alignment = 1
-script = ExtResource( 3 )
 _sections_unfolded = [ "custom_constants" ]
 
-[node name="Plus100" type="Button" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part1" index="0"]
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part1" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 44.0
-margin_bottom = 20.0
+margin_top = 57.0
+margin_right = 108.0
+margin_bottom = 81.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
-mouse_default_cursor_shape = 0
+mouse_default_cursor_shape = 1
 size_flags_horizontal = 1
 size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "+100"
-flat = false
-align = 1
-
-[node name="Plus10" type="Button" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part1" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 27.0
-margin_right = 44.0
-margin_bottom = 47.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "+10"
-flat = false
-align = 1
-
-[node name="Plus" type="Button" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part1" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 54.0
-margin_right = 44.0
-margin_bottom = 74.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "+1"
-flat = false
-align = 1
-
-[node name="Digit" type="Label" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part1" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 81.0
-margin_right = 44.0
-margin_bottom = 95.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-text = "0"
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Minus" type="Button" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part1" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 102.0
-margin_right = 44.0
-margin_bottom = 122.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "-1"
-flat = false
-align = 1
-
-[node name="Minus10" type="Button" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part1" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 129.0
-margin_right = 44.0
-margin_bottom = 149.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "-10"
-flat = false
-align = 1
-
-[node name="Minus100" type="Button" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part1" index="6"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 156.0
-margin_right = 44.0
-margin_bottom = 176.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "-100"
-flat = false
-align = 1
+context_menu_enabled = true
+placeholder_alpha = 0.6
+caret_blink = false
+caret_blink_speed = 0.65
+caret_position = 0
 
 [node name="Digit1" type="Label" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer" index="1"]
 
@@ -1247,9 +548,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 48.0
-margin_right = 52.0
-margin_bottom = 176.0
+margin_left = 112.0
+margin_right = 116.0
+margin_bottom = 138.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -1265,14 +566,13 @@ max_lines_visible = -1
 
 [node name="Part2" type="VBoxContainer" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer" index="2"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 56.0
-margin_right = 100.0
-margin_bottom = 176.0
+margin_left = 120.0
+margin_right = 228.0
+margin_bottom = 138.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -1281,172 +581,30 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 7
 alignment = 1
-script = ExtResource( 3 )
 _sections_unfolded = [ "custom_constants" ]
 
-[node name="Plus100" type="Button" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part2" index="0"]
+[node name="LineEdit2" type="LineEdit" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part2" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 44.0
-margin_bottom = 20.0
+margin_top = 57.0
+margin_right = 108.0
+margin_bottom = 81.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
-mouse_default_cursor_shape = 0
+mouse_default_cursor_shape = 1
 size_flags_horizontal = 1
 size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "+100"
-flat = false
-align = 1
-
-[node name="Plus10" type="Button" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part2" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 27.0
-margin_right = 44.0
-margin_bottom = 47.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "+10"
-flat = false
-align = 1
-
-[node name="Plus" type="Button" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part2" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 54.0
-margin_right = 44.0
-margin_bottom = 74.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "+1"
-flat = false
-align = 1
-
-[node name="Digit" type="Label" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part2" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 81.0
-margin_right = 44.0
-margin_bottom = 95.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-text = "0"
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Minus" type="Button" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part2" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 102.0
-margin_right = 44.0
-margin_bottom = 122.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "-1"
-flat = false
-align = 1
-
-[node name="Minus10" type="Button" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part2" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 129.0
-margin_right = 44.0
-margin_bottom = 149.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "-10"
-flat = false
-align = 1
-
-[node name="Minus100" type="Button" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part2" index="6"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 156.0
-margin_right = 44.0
-margin_bottom = 176.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "-100"
-flat = false
-align = 1
+context_menu_enabled = true
+placeholder_alpha = 0.6
+caret_blink = false
+caret_blink_speed = 0.65
+caret_position = 0
 
 [node name="Digit2" type="Label" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer" index="3"]
 
@@ -1454,9 +612,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 104.0
-margin_right = 108.0
-margin_bottom = 176.0
+margin_left = 232.0
+margin_right = 236.0
+margin_bottom = 138.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -1472,14 +630,13 @@ max_lines_visible = -1
 
 [node name="Part3" type="VBoxContainer" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer" index="4"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 112.0
-margin_right = 156.0
-margin_bottom = 176.0
+margin_left = 240.0
+margin_right = 348.0
+margin_bottom = 138.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -1488,172 +645,30 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 7
 alignment = 1
-script = ExtResource( 3 )
 _sections_unfolded = [ "custom_constants" ]
 
-[node name="Plus100" type="Button" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part3" index="0"]
+[node name="LineEdit3" type="LineEdit" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part3" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 44.0
-margin_bottom = 20.0
+margin_top = 57.0
+margin_right = 108.0
+margin_bottom = 81.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
-mouse_default_cursor_shape = 0
+mouse_default_cursor_shape = 1
 size_flags_horizontal = 1
 size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "+100"
-flat = false
-align = 1
-
-[node name="Plus10" type="Button" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part3" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 27.0
-margin_right = 44.0
-margin_bottom = 47.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "+10"
-flat = false
-align = 1
-
-[node name="Plus" type="Button" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part3" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 54.0
-margin_right = 44.0
-margin_bottom = 74.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "+1"
-flat = false
-align = 1
-
-[node name="Digit" type="Label" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part3" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 81.0
-margin_right = 44.0
-margin_bottom = 95.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-text = "0"
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Minus" type="Button" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part3" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 102.0
-margin_right = 44.0
-margin_bottom = 122.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "-1"
-flat = false
-align = 1
-
-[node name="Minus10" type="Button" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part3" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 129.0
-margin_right = 44.0
-margin_bottom = 149.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "-10"
-flat = false
-align = 1
-
-[node name="Minus100" type="Button" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part3" index="6"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 156.0
-margin_right = 44.0
-margin_bottom = 176.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "-100"
-flat = false
-align = 1
+context_menu_enabled = true
+placeholder_alpha = 0.6
+caret_blink = false
+caret_blink_speed = 0.65
+caret_position = 0
 
 [node name="Digit3" type="Label" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer" index="5"]
 
@@ -1661,9 +676,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 160.0
-margin_right = 164.0
-margin_bottom = 176.0
+margin_left = 352.0
+margin_right = 356.0
+margin_bottom = 138.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -1679,14 +694,13 @@ max_lines_visible = -1
 
 [node name="Part4" type="VBoxContainer" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer" index="6"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 168.0
-margin_right = 212.0
-margin_bottom = 176.0
+margin_left = 360.0
+margin_right = 468.0
+margin_bottom = 138.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -1695,175 +709,81 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 7
 alignment = 1
-script = ExtResource( 3 )
 _sections_unfolded = [ "custom_constants" ]
 
-[node name="Plus100" type="Button" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part4" index="0"]
+[node name="LineEdit4" type="LineEdit" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part4" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 44.0
-margin_bottom = 20.0
+margin_top = 57.0
+margin_right = 108.0
+margin_bottom = 81.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
-mouse_default_cursor_shape = 0
+mouse_default_cursor_shape = 1
 size_flags_horizontal = 1
 size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "+100"
-flat = false
-align = 1
-
-[node name="Plus10" type="Button" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part4" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 27.0
-margin_right = 44.0
-margin_bottom = 47.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "+10"
-flat = false
-align = 1
+context_menu_enabled = true
+placeholder_alpha = 0.6
+caret_blink = false
+caret_blink_speed = 0.65
+caret_position = 0
 
-[node name="Plus" type="Button" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part4" index="2"]
+[node name="Digit4" type="Label" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer" index="7"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 54.0
-margin_right = 44.0
-margin_bottom = 74.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "+1"
-flat = false
-align = 1
-
-[node name="Digit" type="Label" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part4" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 81.0
-margin_right = 44.0
-margin_bottom = 95.0
+margin_left = 472.0
+margin_right = 472.0
+margin_bottom = 138.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-text = "0"
 align = 1
+valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Minus" type="Button" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part4" index="4"]
+[node name="Button" type="Button" parent="MarginContainer/MainScreen/ServerMode" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 102.0
-margin_right = 44.0
-margin_bottom = 122.0
+margin_left = 220.0
+margin_top = 190.0
+margin_right = 251.0
+margin_bottom = 210.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "-1"
+text = "OK"
 flat = false
 align = 1
-
-[node name="Minus10" type="Button" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part4" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 129.0
-margin_right = 44.0
-margin_bottom = 149.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "-10"
-flat = false
-align = 1
-
-[node name="Minus100" type="Button" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part4" index="6"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 156.0
-margin_right = 44.0
-margin_bottom = 176.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "-100"
-flat = false
-align = 1
+_sections_unfolded = [ "Size Flags" ]
 
 [node name="Bottom" type="HBoxContainer" parent="MarginContainer/MainScreen" index="4"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
