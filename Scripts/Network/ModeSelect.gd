@@ -6,10 +6,10 @@ onready var serverModeNode = get_node("../ServerMode")
 var mode
 
 func _ready():
-	selector.connect("item_selected",self,"_on_Plus_pressed")
+	selector.connect("item_selected",self,"_on_item_selected")
 	pass
 
-func _on_Plus_pressed(id):
+func _on_item_selected(id):
 	if get_item_text(id) == "Client":
 		clientModeNode.show()
 		serverModeNode.hide()
