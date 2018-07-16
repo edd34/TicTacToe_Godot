@@ -6,10 +6,20 @@ onready var InputDigit3 = get_tree().get_root().get_node("Node/MarginContainer/M
 onready var InputDigit4 = get_tree().get_root().get_node("Node/MarginContainer/MainScreen/ClientMode/HBoxContainer/Part4/LineEdit4")
 
 func _ready():
-	print(InputDigit1)
-	print(InputDigit2)
-	print(InputDigit3)
-	print(InputDigit4)
 	pass
 
+func checkBoundariesIp4(var digit):
+	
+	pass
 
+func throwErrorDigit(var digit):
+	pass
+
+func getStringDigit():
+	pass
+
+func getIpv4():
+	pass
+
+func saveIpv4():
+	pass
