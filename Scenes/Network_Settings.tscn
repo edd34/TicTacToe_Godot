@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Font/Candal.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/Network/ModeSelect.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/Network/Client_GetInputIp.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Network/Ip_Selector.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -447,14 +448,15 @@ _sections_unfolded = [ "Size Flags" ]
 
 [node name="ServerMode" type="VBoxContainer" parent="MarginContainer/MainScreen" index="3"]
 
+editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 310.0
+margin_top = 369.0
 margin_right = 472.0
-margin_bottom = 520.0
+margin_bottom = 461.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -494,7 +496,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 33.0
 margin_right = 472.0
-margin_bottom = 171.0
+margin_bottom = 53.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -504,259 +506,57 @@ size_flags_vertical = 3
 alignment = 1
 _sections_unfolded = [ "Size Flags", "custom_constants" ]
 
-[node name="Part1" type="VBoxContainer" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer" index="0"]
+[node name="Label" type="Label" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 108.0
-margin_bottom = 138.0
+margin_left = 78.0
+margin_top = 3.0
+margin_right = 196.0
+margin_bottom = 17.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_constants/separation = 7
-alignment = 1
-_sections_unfolded = [ "custom_constants" ]
-
-[node name="LineEdit" type="LineEdit" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part1" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 57.0
-margin_right = 108.0
-margin_bottom = 81.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 1
-size_flags_horizontal = 1
-size_flags_vertical = 1
-focus_mode = 2
-context_menu_enabled = true
-placeholder_alpha = 0.6
-caret_blink = false
-caret_blink_speed = 0.65
-caret_position = 0
-
-[node name="Digit1" type="Label" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 112.0
-margin_right = 116.0
-margin_bottom = 138.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
+mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 1
-text = "."
+size_flags_vertical = 4
+text = "Your IP adress is : "
 align = 1
 valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Part2" type="VBoxContainer" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer" index="2"]
+[node name="Ip_Selector" type="OptionButton" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 120.0
-margin_right = 228.0
-margin_bottom = 138.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_constants/separation = 7
-alignment = 1
-_sections_unfolded = [ "custom_constants" ]
-
-[node name="LineEdit2" type="LineEdit" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 57.0
-margin_right = 108.0
-margin_bottom = 81.0
+margin_left = 200.0
+margin_right = 393.0
+margin_bottom = 20.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
-mouse_default_cursor_shape = 1
-size_flags_horizontal = 1
-size_flags_vertical = 1
-focus_mode = 2
-context_menu_enabled = true
-placeholder_alpha = 0.6
-caret_blink = false
-caret_blink_speed = 0.65
-caret_position = 0
-
-[node name="Digit2" type="Label" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 232.0
-margin_right = 236.0
-margin_bottom = 138.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
+size_flags_horizontal = 4
 size_flags_vertical = 1
-text = "."
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "List IP address available"
+flat = false
 align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Part3" type="VBoxContainer" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 240.0
-margin_right = 348.0
-margin_bottom = 138.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_constants/separation = 7
-alignment = 1
-_sections_unfolded = [ "custom_constants" ]
-
-[node name="LineEdit3" type="LineEdit" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part3" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 57.0
-margin_right = 108.0
-margin_bottom = 81.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 1
-size_flags_horizontal = 1
-size_flags_vertical = 1
-focus_mode = 2
-context_menu_enabled = true
-placeholder_alpha = 0.6
-caret_blink = false
-caret_blink_speed = 0.65
-caret_position = 0
-
-[node name="Digit3" type="Label" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 352.0
-margin_right = 356.0
-margin_bottom = 138.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-text = "."
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Part4" type="VBoxContainer" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer" index="6"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 360.0
-margin_right = 468.0
-margin_bottom = 138.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_constants/separation = 7
-alignment = 1
-_sections_unfolded = [ "custom_constants" ]
-
-[node name="LineEdit4" type="LineEdit" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer/Part4" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 57.0
-margin_right = 108.0
-margin_bottom = 81.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 1
-size_flags_horizontal = 1
-size_flags_vertical = 1
-focus_mode = 2
-context_menu_enabled = true
-placeholder_alpha = 0.6
-caret_blink = false
-caret_blink_speed = 0.65
-caret_position = 0
-
-[node name="Digit4" type="Label" parent="MarginContainer/MainScreen/ServerMode/HBoxContainer" index="7"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 472.0
-margin_right = 472.0
-margin_bottom = 138.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
+items = [  ]
+selected = 0
+script = ExtResource( 4 )
+_sections_unfolded = [ "Size Flags" ]
 
 [node name="Button" type="Button" parent="MarginContainer/MainScreen/ServerMode" index="2"]
 
@@ -765,9 +565,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 220.0
-margin_top = 190.0
+margin_top = 72.0
 margin_right = 251.0
-margin_bottom = 210.0
+margin_bottom = 92.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
