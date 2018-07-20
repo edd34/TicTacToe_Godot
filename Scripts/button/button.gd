@@ -5,7 +5,7 @@ onready var parent_node = int(get_parent().name)
 onready var label = get_tree().get_root().get_node("Node/UI/Info/Label")
 
 func _on_TextureButton_pressed():
-	if (board.state == board.GameState.IN_PROGRESS and 
+	if (board.state == board.GameState.IN_PROGRESS and \
 	!board.isCellValueAlreadySet(parent_node)):
 		if board.player_currentTurn == board.Player.X :
 			get_node("../Sprite").setSprite_X()

@@ -1,6 +1,8 @@
 extends Node
 
 var current_scene = null
+var IP_address = "x.x.x.x"
+var network_connected = false
 
 func _ready():
 	var root = get_tree().get_root()

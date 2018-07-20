@@ -7,10 +7,7 @@ path="res://.import/board.png-f33ecc923bd5dbb235da2ffa1da97a79.stex"
 [deps]
 
 source_file="res://Assets/board.png"
-source_md5="f98f8d46634c9c2f3a824a721cf02c76"
-
 dest_files=[ "res://.import/board.png-f33ecc923bd5dbb235da2ffa1da97a79.stex" ]
-dest_md5="62c5c1d8b8c05c8bed3bd6868b28e6af"
 
 [params]
 

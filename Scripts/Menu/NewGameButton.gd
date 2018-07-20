@@ -19,7 +19,7 @@ func _on_PopupMenu_index_pressed(index):
 				get_node("/root/global").goto_scene("res://Scenes/OnePlayer.tscn")
 				pass
 			"Two Player":
-				get_node("/root/global").goto_scene("res://Scenes/Play.tscn")
+				get_node("/root/global").goto_scene("res://Scenes/TwoPlayer.tscn")
 				pass
 			"Remote Player":
 				get_node("/root/global").goto_scene("res://Scenes/Network_Settings.tscn")
