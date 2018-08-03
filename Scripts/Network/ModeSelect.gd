@@ -12,13 +12,14 @@ func _ready():
 	pass
 
 func _on_item_selected(id):
-	NextButton.show()
 	if get_item_text(id) == "Client":
 		clientModeNode.show()
 		serverModeNode.hide()
 		mode = "client"
+		NextButton.text = "Join"
 	elif get_item_text(id) == "Server":
 		clientModeNode.hide()
 		serverModeNode.show()
 		mode = "server"
-	
+		NextButton.text = "Host"
+	NextButton.show()
