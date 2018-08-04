@@ -32,11 +32,6 @@ func _on_next_button_pressed():
 		get_tree().set_network_peer(peer)
 		print(get_tree().is_network_server())
 		pass
-	
-	
-	
-	
-	
 
 func _player_connected(id):
 	print("Player connected",id)
@@ -44,7 +39,7 @@ func _player_connected(id):
 
 func _connected_ok():
 	print("connected ok")
-	get_node("/root/global").goto_scene("res://Scenes/MainMenu.tscn")
+	get_node("/root/global").goto_scene("res://Scenes/remotePlayer.tscn")
 	pass
 
 func network_peer_connected():
