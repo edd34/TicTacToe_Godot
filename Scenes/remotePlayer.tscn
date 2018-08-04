@@ -511,6 +511,24 @@ _sections_unfolded = [ "custom_fonts" ]
 
 script = ExtResource( 6 )
 
+[connection signal="pressed" from="grid/0/TextureButton" to="grid/0/TextureButton" method="_on_TextureButton_pressed"]
+
+[connection signal="pressed" from="grid/1/TextureButton" to="grid/1/TextureButton" method="_on_TextureButton_pressed"]
+
+[connection signal="pressed" from="grid/2/TextureButton" to="grid/2/TextureButton" method="_on_TextureButton_pressed"]
+
+[connection signal="pressed" from="grid/3/TextureButton" to="grid/3/TextureButton" method="_on_TextureButton_pressed"]
+
+[connection signal="pressed" from="grid/4/TextureButton" to="grid/4/TextureButton" method="_on_TextureButton_pressed"]
+
+[connection signal="pressed" from="grid/5/TextureButton" to="grid/5/TextureButton" method="_on_TextureButton_pressed"]
+
+[connection signal="pressed" from="grid/6/TextureButton" to="grid/6/TextureButton" method="_on_TextureButton_pressed"]
+
+[connection signal="pressed" from="grid/7/TextureButton" to="grid/7/TextureButton" method="_on_TextureButton_pressed"]
+
+[connection signal="pressed" from="grid/8/TextureButton" to="grid/8/TextureButton" method="_on_TextureButton_pressed"]
+
 [connection signal="pressed" from="UI/Footer/HomeButton" to="UI/Footer/HomeButton" method="_on_HomeButton_pressed"]
 
 
