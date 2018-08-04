@@ -5,6 +5,10 @@ onready var parent_node = int(get_parent().name)
 onready var label = get_tree().get_root().get_node("Node/UI/Info/Label")
 
 func _on_TextureButton_pressed():
+	rpc("play")
+	pass # replace with function body
+	
+sync func play():
 	if (board.state == board.GameState.IN_PROGRESS and \
 	!board.isCellValueAlreadySet(parent_node)):
 		if board.player_currentTurn == board.Player.X :
@@ -22,4 +26,4 @@ func _on_TextureButton_pressed():
 				label.text = "Player X turn"
 			board.Player.O:
 				label.text = "Player O turn"
-	pass # replace with function body
+	pass
