@@ -4,6 +4,8 @@ var IP_address = ""
 #var network_connected = false
 enum network_status {client = 1, server = 2, not_connected = 0}
 
+var my_network_status = 0
+
 func _ready():
 	pass
 
