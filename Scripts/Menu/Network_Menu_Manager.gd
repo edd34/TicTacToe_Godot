@@ -12,10 +12,12 @@ func _ready():
 	next_button.connect("pressed",self,"_on_next_button_pressed")
 	get_tree().connect("network_peer_connected",self,"_player_connected")
 	get_tree().connect("connected_to_server",self,"_connected_ok")
+	get_tree().connect("server_disconnected", self, "_server_disconnected")
 	pass
 
 func _on_back_button_pressed():
 	get_node("/root/global").goto_scene("res://Scenes/MainMenu.tscn")
+	get_tree().set_network_peer(null)
 	pass
 
 func _on_next_button_pressed():
@@ -60,4 +62,9 @@ func _connected_ok():
 
 func network_peer_connected():
 	print("network peer connected")
+	pass
+	
+func _server_disconnected():
+	get_tree().set_network_peer(null)
+	get_node("/root/global").goto_scene("res://Scenes/MainMenu.tscn")
 	pass
