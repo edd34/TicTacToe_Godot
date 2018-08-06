@@ -19,7 +19,7 @@ func _on_item_selected(ID):
 
 	elif(selector.get_item_text(ID) == "Server"):
 			print("server selected")
-			timer_node.connect("timeout",self,"_update_label")
+			#timer_node.connect("timeout",self,"_update_label")
 			pass
 	pass
 
