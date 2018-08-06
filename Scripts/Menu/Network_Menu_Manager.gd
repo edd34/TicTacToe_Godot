@@ -4,6 +4,8 @@ onready var back_button = get_tree().get_root().get_node("Node/MarginContainer/M
 onready var next_button = get_tree().get_root().get_node("Node/MarginContainer/MainScreen/Bottom/NextButton")
 onready var selector = get_tree().get_root().get_node("Node/MarginContainer/MainScreen/OptionButton")
 onready var margin_container = get_tree().get_root().get_node("Node/MarginContainer")
+onready var timer_node = get_tree().get_root().get_node("Node/MarginContainer/MainScreen/Status_Node/Timer")
+onready var status_node = get_tree().get_root().get_node("Node/MarginContainer/MainScreen/Status_Node")
 
 func _ready():
 	back_button.connect("pressed",self,"_on_back_button_pressed")
@@ -34,6 +36,8 @@ func _on_next_button_pressed():
 		peer.create_server(7159, 1)
 		get_tree().set_network_peer(peer)
 		print(get_tree().is_network_server())
+		#get_tree().get_root().get_node("Node/MarginContainer/MainScreen/Status_Node")
+		timer_node.connect("timeout",status_node,"_update_label")
 		pass
 
 func _player_connected(id):
