@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
+path="res://.import/mawheto_logo.png-40f1e5f21535009be540a112c77735c0.stex"
 
 [deps]
 
-source_file="res://icon.png"
-dest_files=[ "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex" ]
+source_file="res://UX/mawheto_logo.png"
+dest_files=[ "res://.import/mawheto_logo.png-40f1e5f21535009be540a112c77735c0.stex" ]
 
 [params]
 
