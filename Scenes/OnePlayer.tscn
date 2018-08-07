@@ -537,6 +537,4 @@ script = ExtResource( 6 )
 
 [connection signal="pressed" from="grid/8/TextureButton" to="grid/8/TextureButton" method="_on_TextureButton_pressed"]
 
-[connection signal="pressed" from="UI/Footer/HomeButton" to="UI/Footer/HomeButton" method="_on_HomeButton_pressed"]
-
 

@@ -23,7 +23,7 @@ use_filter = false
 font_data = ExtResource( 4 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 [node name="grid" type="Sprite" parent="." index="0"]
 
@@ -507,6 +507,8 @@ _sections_unfolded = [ "custom_fonts" ]
 
 [node name="Script" type="Node" parent="." index="2"]
 
+editor/display_folded = true
+
 [node name="Board" type="Node" parent="Script" index="0"]
 
 script = ExtResource( 6 )
@@ -528,7 +530,5 @@ script = ExtResource( 6 )
 [connection signal="pressed" from="grid/7/TextureButton" to="grid/7/TextureButton" method="_on_TextureButton_pressed"]
 
 [connection signal="pressed" from="grid/8/TextureButton" to="grid/8/TextureButton" method="_on_TextureButton_pressed"]
-
-[connection signal="pressed" from="UI/Footer/HomeButton" to="UI/Footer/HomeButton" method="_on_HomeButton_pressed"]
 
 
