@@ -28,7 +28,27 @@ func getWinner():
 	else:
 		return "O"
 	pass
-	
+
+func return_available_move():
+	var available = []
+	for i in range(9):
+		if Cells[i] == 0 :
+			available.append(i)
+			pass
+		pass
+	print("available move =",available)
+	return available
+	pass
+
+func isDraw():
+	if Cells[0] != 0 and Cells[1] !=0 and Cells[2] != 0 and \
+	Cells[3] != 0 and Cells[4] !=0 and Cells[5] != 0 and \
+	Cells[6] != 0 and Cells[7] !=0 and Cells[8] != 0 :
+		return true
+	else : 
+		return false
+	pass
+
 func clearCells():
 	for i in range(9):
 		Cells[i]=0
@@ -80,7 +100,7 @@ func flipCurrentTurn():
 func mark_row_col(index):
 	if(isValid(index)):
 		Cells[index] = player_currentTurn
-		if(isWinningMoveByPlayer(player_currentTurn)):
+		if isWinningMoveByPlayer(player_currentTurn):
 			state = GameState.FINISHED
 			player_winner = player_currentTurn
 			#get_node("../../UI/player_turn").text = ""
@@ -90,9 +110,12 @@ func mark_row_col(index):
 			else:
 				print("winner = 2")
 				#get_node("../../UI/Winner").text = "Winner = player O"
-			
+		elif return_available_move().size() == 0:
+			state = GameState.FINISHED
+			player_winner = -1
 		else:
-			flipCurrentTurn()
+			if return_available_move().size() > 0 :
+				flipCurrentTurn()
 			
 func mark(pos):
 	mark_row_col(pos)
