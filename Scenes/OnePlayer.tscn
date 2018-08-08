@@ -25,7 +25,7 @@ use_filter = false
 font_data = ExtResource( 4 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 [node name="grid" type="Sprite" parent="." index="0"]
 
@@ -40,7 +40,6 @@ __meta__ = {
 
 [node name="0" type="Node2D" parent="grid" index="0"]
 
-editor/display_folded = true
 position = Vector2( -123.347, -123.362 )
 scale = Vector2( 1.7704, 1.76991 )
 _sections_unfolded = [ "Transform" ]
@@ -355,6 +354,8 @@ expand = true
 script = ExtResource( 3 )
 
 [node name="UI" type="Node" parent="." index="1"]
+
+editor/display_folded = true
 
 [node name="Footer" type="Container" parent="UI" index="0"]
 

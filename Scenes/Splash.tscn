@@ -21,7 +21,7 @@ use_filter = false
 font_data = ExtResource( 2 )
 _sections_unfolded = [ "Font", "Font/fallback", "Settings" ]
 
-[node name="Splash" type="Node" index="0"]
+[node name="Splash" type="Node"]
 
 [node name="MarginContainer_body" type="MarginContainer" parent="." index="0"]
 

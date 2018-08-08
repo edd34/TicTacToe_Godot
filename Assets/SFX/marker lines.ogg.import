@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/marker lines.ogg-455d722272273235806d2cc7e8b1e415.oggstr"
+
+[deps]
+
+source_file="res://Assets/SFX/marker lines.ogg"
+dest_files=[ "res://.import/marker lines.ogg-455d722272273235806d2cc7e8b1e415.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
