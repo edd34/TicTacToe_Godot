@@ -23,12 +23,14 @@ func return_available_move():
 			available.append(i)
 			pass
 		pass
+	print("available move =",available)
 	return available
 	pass
 
 
 func AI_choose_random_move():
 	var moves = return_available_move()
+	print("moves size = ",moves.size())
 	if moves.size() > 0:
 		randomize()
 		return moves[randi() % moves.size()]
@@ -100,7 +102,7 @@ func isWinningMoveByPlayer(player):
 	pass
 			
 func flipCurrentTurn():
-	if(is_player_currentTurn == Player.X):
+	if is_player_currentTurn == Player.X :
 		is_player_currentTurn = Player.O
 		var AI_choice = AI_choose_random_move()
 		mark(AI_choice)
@@ -125,7 +127,8 @@ func mark_row_col(index):
 				#get_node("../../UI/Winner").text = "Winner = player O"
 			
 		else:
-			flipCurrentTurn()
+			if return_available_move().size() > 0 :
+				flipCurrentTurn()
 			
 func mark(pos):
 	mark_row_col(pos)
