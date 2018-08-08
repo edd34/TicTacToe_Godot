@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Assets/board.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/set_sprite_player.gd" type="Script" id=2]
@@ -6,6 +6,10 @@
 [ext_resource path="res://Font/Candal.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Scripts/Menu/MainMenuButton.gd" type="Script" id=5]
 [ext_resource path="res://Scripts/Board.gd" type="Script" id=6]
+[ext_resource path="res://Assets/SFX/marker lines.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Assets/SFX/marker_circle.ogg" type="AudioStream" id=8]
+[ext_resource path="res://Assets/SFX/win.wav" type="AudioStream" id=9]
+[ext_resource path="res://Assets/SFX/Lose 7 - Sound effects Pack 2.ogg" type="AudioStream" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -23,7 +27,7 @@ use_filter = false
 font_data = ExtResource( 4 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 [node name="grid" type="Sprite" parent="." index="0"]
 
@@ -516,6 +520,62 @@ _sections_unfolded = [ "custom_fonts" ]
 [node name="Board" type="Node" parent="Script" index="0"]
 
 script = ExtResource( 6 )
+
+[node name="SFX" type="Node" parent="." index="3"]
+
+[node name="PlayCross" type="AudioStreamPlayer" parent="SFX" index="0"]
+
+stream = ExtResource( 7 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="PlayCircle" type="AudioStreamPlayer" parent="SFX" index="1"]
+
+stream = ExtResource( 8 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Win" type="AudioStreamPlayer" parent="SFX" index="2"]
+
+stream = ExtResource( 9 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Lose" type="AudioStreamPlayer" parent="SFX" index="3"]
+
+stream = ExtResource( 10 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Click" type="AudioStreamPlayer" parent="SFX" index="4"]
+
+stream = null
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Draw" type="AudioStreamPlayer" parent="SFX" index="5"]
+
+stream = null
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 [connection signal="pressed" from="grid/0/TextureButton" to="grid/0/TextureButton" method="_on_TextureButton_pressed"]
 
