@@ -46,7 +46,7 @@ use_filter = false
 font_data = ExtResource( 1 )
 _sections_unfolded = [ "Font", "Resource", "Settings" ]
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 [node name="MarginContainer" type="MarginContainer" parent="." index="0"]
 

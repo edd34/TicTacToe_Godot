@@ -23,7 +23,7 @@ use_filter = false
 font_data = ExtResource( 4 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 [node name="grid" type="Sprite" parent="." index="0"]
 
