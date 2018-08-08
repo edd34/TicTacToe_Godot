@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/Network/lobby.gd" type="Script" id=1]
 [ext_resource path="res://Font/Candal.ttf" type="DynamicFontData" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Scripts/Network/Ip_Selector.gd" type="Script" id=5]
 [ext_resource path="res://Scripts/Network/Status_Node.gd" type="Script" id=6]
 [ext_resource path="res://Scripts/Menu/Network_Menu_Manager.gd" type="Script" id=7]
+[ext_resource path="res://Assets/SFX/not-really-lost.wav" type="AudioStream" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -16,7 +17,7 @@ use_filter = false
 font_data = ExtResource( 2 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -676,5 +677,14 @@ text = "Next"
 flat = false
 align = 1
 _sections_unfolded = [ "Size Flags" ]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="1"]
+
+stream = ExtResource( 8 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
 
 

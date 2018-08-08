@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://UX/icon2.png" type="Texture" id=1]
 [ext_resource path="res://Font/Candal.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Scripts/button/start_button.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/splash/SkipSplash.gd" type="Script" id=4]
+[ext_resource path="res://Assets/SFX/intro.wav" type="AudioStream" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -216,5 +217,14 @@ __meta__ = {
 [node name="SkipSplash" type="Node" parent="." index="3"]
 
 script = ExtResource( 4 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="4"]
+
+stream = ExtResource( 5 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
 
 

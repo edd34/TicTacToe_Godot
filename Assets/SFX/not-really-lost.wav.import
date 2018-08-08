@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/not-really-lost.wav-9a3fe0dc23644c54ae1c0066a0aea2e1.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/not-really-lost.wav"
+dest_files=[ "res://.import/not-really-lost.wav-9a3fe0dc23644c54ae1c0066a0aea2e1.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=true
+compress/mode=0

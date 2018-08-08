@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Font/Candal.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/Menu/NewGameButton.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/Menu/HelpMenuButton.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/Menu/AboutButton.gd" type="Script" id=4]
 [ext_resource path="res://Scripts/Menu/ExitButton.gd" type="Script" id=5]
+[ext_resource path="res://Assets/SFX/finding-home.wav" type="AudioStream" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -326,6 +327,15 @@ resizable = false
 dialog_text = "We are doing our best to brought this to you soon"
 dialog_hide_on_ok = true
 _sections_unfolded = [ "Anchor", "Dialog", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Pause", "Popup", "Rect", "Size Flags", "Visibility", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="1"]
+
+stream = ExtResource( 6 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
 
 [connection signal="pressed" from="MarginContainer/CenterContainer/MainScreen/MainMenu/NewGameButton" to="MarginContainer/CenterContainer/MainScreen/MainMenu/NewGameButton" method="_on_NewGameButton_pressed"]
 

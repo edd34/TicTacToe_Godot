@@ -1,6 +1,6 @@
 extends Button
 
-onready var HomeButton = get_tree().get_root().get_node("Node/UI/Footer/HomeButton")
+onready var HomeButton = get_tree().get_root().get_node("Node/Header/MainMenu")
 
 func _ready():
 	HomeButton.connect("pressed",self,"_on_MainMenu_pressed")

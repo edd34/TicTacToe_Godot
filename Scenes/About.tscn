@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Font/Candal.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/Menu/MainMenuButton.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/Menu/About_Text.gd" type="Script" id=3]
+[ext_resource path="res://Assets/SFX/buildup.wav" type="AudioStream" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -237,6 +238,15 @@ process_mode = 1
 wait_time = 0.5
 one_shot = false
 autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="4"]
+
+stream = ExtResource( 4 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
 
 [connection signal="pressed" from="Header/MainMenu" to="Header/MainMenu" method="_on_MainMenu_pressed"]
 
