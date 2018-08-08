@@ -3,10 +3,11 @@ extends Node
 onready var splash1_node = get_tree().get_root().get_node("Splash0/splash1")
 onready var splash2_node = get_tree().get_root().get_node("Splash0/splash2")
 onready var timer_node = get_tree().get_root().get_node("Splash0/Timer")
+onready var AudioStreamPlayer_node = get_tree().get_root().get_node("Splash0/AudioStreamPlayer")
 
 var alpha = 0.0
 var state = [0,0,0]
-var delta = 0.0040
+var delta = 0.008
 
 func _ready():
 	splash1_node.hide()
@@ -15,6 +16,7 @@ func _ready():
 	splash2_node.modulate = Color(1,1,1,0)
 	splash1_node.show()
 	timer_node.connect("timeout",self,"_on_timeout")
+	AudioStreamPlayer_node.play()
 	pass
 
 func _on_timeout():
@@ -53,6 +55,7 @@ func _on_timeout():
 			if alpha > 0 :
 				alpha -= delta
 				splash2_node.modulate = Color(1,1,1,alpha)
+				AudioStreamPlayer_node.volume_db -= alpha
 			else : 
 				alpha = 0
 				splash1_node.hide()
