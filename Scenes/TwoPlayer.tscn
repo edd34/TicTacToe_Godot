@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Assets/board.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/set_sprite_player.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Assets/SFX/marker_circle.ogg" type="AudioStream" id=8]
 [ext_resource path="res://Assets/SFX/win.wav" type="AudioStream" id=9]
 [ext_resource path="res://Assets/SFX/Lose 7 - Sound effects Pack 2.ogg" type="AudioStream" id=10]
+[ext_resource path="res://Assets/SFX/draw.wav" type="AudioStream" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -27,7 +28,7 @@ use_filter = false
 font_data = ExtResource( 4 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 [node name="grid" type="Sprite" parent="." index="0"]
 
@@ -570,7 +571,7 @@ bus = "Master"
 
 [node name="Draw" type="AudioStreamPlayer" parent="SFX" index="5"]
 
-stream = null
+stream = ExtResource( 11 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
