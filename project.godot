@@ -11,9 +11,9 @@ config_version=3
 [application]
 
 config/name="TicTacToe"
-run/main_scene="res://Scenes/MainMenu.tscn"
-boot_splash/image="res://UX/mawheto_logo.png"
-config/icon="res://UX/icon.png"
+run/main_scene="res://Scenes/Splash0.tscn"
+boot_splash/fullsize=false
+config/icon="res://UX/tictactoe_profile_pic.jpg"
 
 [autoload]
 
