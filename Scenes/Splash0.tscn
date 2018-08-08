@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/splash/Splash_manager.gd" type="Script" id=1]
 [ext_resource path="res://UX/mawheto_logo.png" type="Texture" id=2]
 [ext_resource path="res://Font/Candal.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Scripts/splash/SkipSplash.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -218,5 +219,9 @@ process_mode = 1
 wait_time = 0.01
 one_shot = false
 autostart = true
+
+[node name="SkipSplash" type="Node" parent="." index="3"]
+
+script = ExtResource( 4 )
 
 
