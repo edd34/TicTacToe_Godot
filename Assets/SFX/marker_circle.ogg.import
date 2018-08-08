@@ -11,5 +11,5 @@ dest_files=[ "res://.import/marker_circle.ogg-44d6a6f0e0004166049ad855799c6473.o
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

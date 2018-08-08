@@ -11,5 +11,5 @@ dest_files=[ "res://.import/marker lines.ogg-455d722272273235806d2cc7e8b1e415.og
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
