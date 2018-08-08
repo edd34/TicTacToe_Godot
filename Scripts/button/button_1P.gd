@@ -3,6 +3,22 @@ extends TextureButton
 onready var board = get_tree().get_root().get_node("Node/Script/Board")
 onready var parent_node = int(get_parent().name)
 onready var label = get_tree().get_root().get_node("Node/UI/Info/Label")
+onready var PlayCross_node = get_tree().get_root().get_node("Node/SFX/PlayCross")
+onready var PlayCircle_node = get_tree().get_root().get_node("Node/SFX/PlayCircle")
+
+func _ready():
+	PlayCross_node.connect("finished",self,"_on_finished")
+	PlayCircle_node.connect("finished",self,"_on_finished")
+	pass
+
+func _on_finished():
+	if PlayCross_node.is_playing() == true :
+		PlayCross_node.stop()
+		pass
+	elif PlayCircle_node.is_playing() == true :
+		PlayCircle_node.stop()
+		pass
+	pass
 
 func _on_TextureButton_pressed():
 	if (board.state == board.GameState.IN_PROGRESS and \
