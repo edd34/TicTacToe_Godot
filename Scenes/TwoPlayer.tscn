@@ -4,7 +4,7 @@
 [ext_resource path="res://Scripts/set_sprite_player.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/button/button.gd" type="Script" id=3]
 [ext_resource path="res://Font/Candal.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://Scripts/Menu/MainMenuButton.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/Menu/MainMenuButton_ingame.gd" type="Script" id=5]
 [ext_resource path="res://Scripts/Board.gd" type="Script" id=6]
 [ext_resource path="res://Assets/SFX/marker lines.ogg" type="AudioStream" id=7]
 [ext_resource path="res://Assets/SFX/marker_circle.ogg" type="AudioStream" id=8]
