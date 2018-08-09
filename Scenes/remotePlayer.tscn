@@ -12,6 +12,7 @@
 [ext_resource path="res://Assets/SFX/Lose 7 - Sound effects Pack 2.ogg" type="AudioStream" id=10]
 [ext_resource path="res://Assets/SFX/not-really-lost.wav" type="AudioStream" id=11]
 
+
 [sub_resource type="DynamicFont" id=1]
 
 size = 30
