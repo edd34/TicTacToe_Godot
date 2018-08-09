@@ -47,7 +47,7 @@ use_filter = false
 font_data = ExtResource( 1 )
 _sections_unfolded = [ "Font", "Resource", "Settings" ]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 [node name="MarginContainer" type="MarginContainer" parent="." index="0"]
 
@@ -95,9 +95,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 131.0
-margin_top = 155.0
+margin_top = 131.0
 margin_right = 340.0
-margin_bottom = 565.0
+margin_bottom = 589.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -161,7 +161,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 233.0
 margin_right = 209.0
-margin_bottom = 410.0
+margin_bottom = 458.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -226,7 +226,7 @@ align = 1
 script = ExtResource( 3 )
 _sections_unfolded = [ "Focus", "custom_fonts" ]
 
-[node name="AboutButton" type="Button" parent="MarginContainer/CenterContainer/MainScreen/MainMenu" index="2"]
+[node name="Settings" type="Button" parent="MarginContainer/CenterContainer/MainScreen/MainMenu" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -235,6 +235,33 @@ anchor_bottom = 0.0
 margin_top = 96.0
 margin_right = 209.0
 margin_bottom = 129.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 4 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Settings"
+flat = false
+align = 1
+script = ExtResource( 3 )
+_sections_unfolded = [ "Focus", "custom_fonts" ]
+
+[node name="AboutButton" type="Button" parent="MarginContainer/CenterContainer/MainScreen/MainMenu" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 144.0
+margin_right = 209.0
+margin_bottom = 177.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -253,15 +280,15 @@ align = 1
 script = ExtResource( 4 )
 _sections_unfolded = [ "Focus", "custom_fonts" ]
 
-[node name="ExitButton" type="Button" parent="MarginContainer/CenterContainer/MainScreen/MainMenu" index="3"]
+[node name="ExitButton" type="Button" parent="MarginContainer/CenterContainer/MainScreen/MainMenu" index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 144.0
+margin_top = 192.0
 margin_right = 209.0
-margin_bottom = 177.0
+margin_bottom = 225.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -340,6 +367,8 @@ bus = "Master"
 [connection signal="pressed" from="MarginContainer/CenterContainer/MainScreen/MainMenu/NewGameButton" to="MarginContainer/CenterContainer/MainScreen/MainMenu/NewGameButton" method="_on_NewGameButton_pressed"]
 
 [connection signal="pressed" from="MarginContainer/CenterContainer/MainScreen/MainMenu/Help" to="MarginContainer/CenterContainer/MainScreen/MainMenu/Help" method="_on_Help_pressed"]
+
+[connection signal="pressed" from="MarginContainer/CenterContainer/MainScreen/MainMenu/Settings" to="MarginContainer/CenterContainer/MainScreen/MainMenu/Settings" method="_on_Help_pressed"]
 
 [connection signal="pressed" from="MarginContainer/CenterContainer/MainScreen/MainMenu/AboutButton" to="MarginContainer/CenterContainer/MainScreen/MainMenu/AboutButton" method="_on_AboutButton_pressed"]
 
