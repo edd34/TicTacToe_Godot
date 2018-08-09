@@ -2,7 +2,7 @@ extends RichTextLabel
 
 var line
 var autoscroll_state
-onready var checkButton = get_tree().get_root().get_node("/Node/Footer/CheckButton")
+onready var checkButton = get_tree().get_root().get_node("Node/Footer/CheckButton")
 
 func _ready():
 	line = 0
