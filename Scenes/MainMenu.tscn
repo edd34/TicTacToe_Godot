@@ -368,8 +368,6 @@ bus = "Master"
 
 [connection signal="pressed" from="MarginContainer/CenterContainer/MainScreen/MainMenu/Help" to="MarginContainer/CenterContainer/MainScreen/MainMenu/Help" method="_on_Help_pressed"]
 
-[connection signal="pressed" from="MarginContainer/CenterContainer/MainScreen/MainMenu/Settings" to="MarginContainer/CenterContainer/MainScreen/MainMenu/Settings" method="_on_Help_pressed"]
-
 [connection signal="pressed" from="MarginContainer/CenterContainer/MainScreen/MainMenu/AboutButton" to="MarginContainer/CenterContainer/MainScreen/MainMenu/AboutButton" method="_on_AboutButton_pressed"]
 
 [connection signal="pressed" from="MarginContainer/CenterContainer/MainScreen/MainMenu/ExitButton" to="MarginContainer/CenterContainer/MainScreen/MainMenu/ExitButton" method="_on_ExitButton_pressed"]
