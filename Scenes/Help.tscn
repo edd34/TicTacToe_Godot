@@ -37,7 +37,7 @@ use_filter = false
 font_data = ExtResource( 1 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 [node name="CenterContainer" type="CenterContainer" parent="." index="0"]
 
@@ -283,7 +283,7 @@ volume_db = 0.0
 pitch_scale = 1.0
 autoplay = true
 mix_target = 0
-bus = "Master"
+bus = "Music"
 
 [connection signal="pressed" from="Header/MainMenu" to="Header/MainMenu" method="_on_MainMenu_pressed"]
 

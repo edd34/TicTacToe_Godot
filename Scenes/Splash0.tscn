@@ -14,7 +14,7 @@ use_filter = false
 font_data = ExtResource( 3 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Splash0" type="Node" index="0"]
+[node name="Splash0" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -232,7 +232,7 @@ volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "Master"
+bus = "Music"
 _sections_unfolded = [ "Pause" ]
 
 

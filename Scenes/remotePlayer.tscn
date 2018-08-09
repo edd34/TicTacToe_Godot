@@ -12,7 +12,6 @@
 [ext_resource path="res://Assets/SFX/Lose 7 - Sound effects Pack 2.ogg" type="AudioStream" id=10]
 [ext_resource path="res://Assets/SFX/not-really-lost.wav" type="AudioStream" id=11]
 
-
 [sub_resource type="DynamicFont" id=1]
 
 size = 30
@@ -29,7 +28,7 @@ use_filter = false
 font_data = ExtResource( 4 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 [node name="grid" type="Sprite" parent="." index="0"]
 
@@ -518,8 +517,6 @@ script = ExtResource( 6 )
 
 [node name="SFX" type="Node" parent="." index="3"]
 
-editor/display_folded = true
-
 [node name="PlayCross" type="AudioStreamPlayer" parent="SFX" index="0"]
 
 stream = ExtResource( 7 )
@@ -527,7 +524,7 @@ volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "Master"
+bus = "GameSFX"
 
 [node name="PlayCircle" type="AudioStreamPlayer" parent="SFX" index="1"]
 
@@ -536,7 +533,7 @@ volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "Master"
+bus = "GameSFX"
 
 [node name="Win" type="AudioStreamPlayer" parent="SFX" index="2"]
 
@@ -545,7 +542,7 @@ volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "Master"
+bus = "GameSFX"
 
 [node name="Lose" type="AudioStreamPlayer" parent="SFX" index="3"]
 
@@ -554,7 +551,7 @@ volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "Master"
+bus = "GameSFX"
 
 [node name="Click" type="AudioStreamPlayer" parent="SFX" index="4"]
 
@@ -563,7 +560,7 @@ volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "Master"
+bus = "GameSFX"
 
 [node name="Draw" type="AudioStreamPlayer" parent="SFX" index="5"]
 
@@ -572,7 +569,7 @@ volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "Master"
+bus = "GameSFX"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="4"]
 
@@ -581,7 +578,7 @@ volume_db = 0.0
 pitch_scale = 1.0
 autoplay = true
 mix_target = 0
-bus = "Master"
+bus = "Music"
 
 [connection signal="pressed" from="grid/0/TextureButton" to="grid/0/TextureButton" method="_on_TextureButton_pressed"]
 

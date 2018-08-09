@@ -55,7 +55,7 @@ func _on_timeout():
 			if alpha > 0 :
 				alpha -= delta
 				splash2_node.modulate = Color(1,1,1,alpha)
-				AudioStreamPlayer_node.volume_db -= alpha
+				AudioStreamPlayer_node.volume_db = -(1-alpha)*60 #-= alpha # ~= -(1 - alpha)*60
 			else : 
 				alpha = 0
 				splash1_node.hide()
