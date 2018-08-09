@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Font/Candal.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Scripts/Menu/MainMenuButton.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Menu/MainMenuButton_top.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/Menu/HelpManager.gd" type="Script" id=3]
 [ext_resource path="res://Assets/SFX/breakdown.wav" type="AudioStream" id=4]
 
