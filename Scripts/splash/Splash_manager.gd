@@ -10,6 +10,7 @@ var state = [0,0,0]
 var delta = 0.008
 
 func _ready():
+	load("res://Scripts/Settings/Settings_Sound.gd").new()._on_game_start_load_prefs()
 	splash1_node.hide()
 	splash1_node.modulate = Color(1,1,1,0)
 	splash2_node.hide()
