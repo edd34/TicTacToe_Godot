@@ -29,7 +29,7 @@ use_filter = false
 font_data = ExtResource( 4 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 [node name="grid" type="Sprite" parent="." index="0"]
 
@@ -532,7 +532,7 @@ volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "GameSFX"
+bus = "Master"
 
 [node name="PlayCircle" type="AudioStreamPlayer" parent="SFX" index="1"]
 
@@ -541,7 +541,7 @@ volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "GameSFX"
+bus = "Master"
 
 [node name="Win" type="AudioStreamPlayer" parent="SFX" index="2"]
 
@@ -550,7 +550,7 @@ volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "GameSFX"
+bus = "Master"
 
 [node name="Lose" type="AudioStreamPlayer" parent="SFX" index="3"]
 
@@ -559,7 +559,7 @@ volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "GameSFX"
+bus = "Master"
 
 [node name="Click" type="AudioStreamPlayer" parent="SFX" index="4"]
 
@@ -568,7 +568,7 @@ volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "GameSFX"
+bus = "Master"
 
 [node name="Draw" type="AudioStreamPlayer" parent="SFX" index="5"]
 
@@ -577,14 +577,14 @@ volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "GameSFX"
+bus = "Master"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="4"]
 
 stream = ExtResource( 12 )
 volume_db = 0.0
 pitch_scale = 1.0
-autoplay = false
+autoplay = true
 mix_target = 0
 bus = "Music"
 
