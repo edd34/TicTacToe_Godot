@@ -5,7 +5,7 @@ onready var Dialog = get_tree().get_root().get_node("Node/MarginContainer/Center
 
 func show_Popup_NewGame():
 	PopupMenu_newGame.popup()
-	PopupMenu_newGame.set_position(Vector2(315,403))
+	PopupMenu_newGame.set_position(Vector2(338,370))
 	pass
 
 func _on_NewGameButton_pressed():
