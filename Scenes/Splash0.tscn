@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/splash/Splash_manager.gd" type="Script" id=1]
-[ext_resource path="res://UX/mawheto_logo.png" type="Texture" id=2]
+[ext_resource path="res://UX/mawheto_logo_alpha.png" type="Texture" id=2]
 [ext_resource path="res://Font/Candal.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Scripts/splash/SkipSplash.gd" type="Script" id=4]
 [ext_resource path="res://Assets/SFX/splash_sfx.ogg" type="AudioStream" id=5]
@@ -14,7 +14,7 @@ use_filter = false
 font_data = ExtResource( 3 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Splash0" type="Node" index="0"]
+[node name="Splash0" type="Node"]
 
 script = ExtResource( 1 )
 
